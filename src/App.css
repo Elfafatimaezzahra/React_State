@@ -1,0 +1,46 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+}
+.App {
+  text-align: center; 
+  color: pink;
+}
+.mypic{
+  height: 300px;
+  width: 250px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.btn{
+  color: black;
+  background-color: pink;
+  width: 200px;
+  height: 30px;
+  border-radius: 15px;
+  margin-top: 60px;
+}
+.btn:hover{
+  background-color: rgb(147, 92, 101);
+  color: white;
+}
+.time{
+  margin-top: 20px;
+  border: 1px solid pink;
+  border-radius: 15px;
+  width: 200px;
+  justify-content: center;
+  margin-left: 540px;
+  height: 25px;
+}
+.bio{
+  padding-top: 20px;
+  width: 400px;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
