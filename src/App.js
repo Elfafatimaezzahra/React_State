@@ -36,10 +36,17 @@ class App extends Component {
   // define a handleToggle method that toggles the showPerson state when the button is clicked.
   handleToggle = () => {
     this.setState({ showPerson: !this.state.showPerson });
+    clearInterval(this.intervalId);
+    if (!this.state.showPerson){
+      this.setState({mountedTime: 0})
       this.intervalId = setInterval(() => {
         this.setState({ mountedTime: this.state.mountedTime + 1});
       }, 1000);
+    }
+      
+      
   };
+  
 
   // in the render method, we use destructuring to extract the person and showPerson properties from 
   // the state. We conditionally render the person's 
@@ -50,7 +57,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <button className='btn' onClick={this.handleToggle}>Toggle Person</button>
+        <button className='btn' onClick={this.handleToggle} >Toggle Person</button>
         {showPerson && (
           <div className='content'>
             <div><img className='mypic' src={imgSrc} alt={fullName} /></div>
